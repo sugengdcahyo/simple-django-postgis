@@ -156,5 +156,25 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
 
+# Visual Studio Code #
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+# Only for Development only
+src/*/migrations
+src/*/migrations/*
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
+# Only for Developer __pycache__
+src/*/__pycache__
+src/*/__pycache__/*
+
 # own
 src/geopsql/settings/local.py
