@@ -34,16 +34,28 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.gis',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # third party
-
+    'django_extensions',
+    'rest_framework',
     # own
     'accounts',
+    'annotations',
 ]
 
 AUTH_USER_MODEL = 'accounts.user'
+
+# third party conf
+# from .conf.third_party import *
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+        'rest_framework.permissions.IsAdminUser',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
